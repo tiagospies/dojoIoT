@@ -1,0 +1,19 @@
+// This file provides basic support for building the TensorFlow demo
+// in Android Studio with Gradle.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath 'de.undercouch:gradle-download-task:3.1.2'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
