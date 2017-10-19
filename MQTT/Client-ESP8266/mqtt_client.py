@@ -22,7 +22,7 @@ def do_connect():
     if not sta_if.isconnected():
         print('connecting to network...')
         sta_if.active(True)
-        sta_if.connect('SSID', 'PW')
+        sta_if.connect('tiago', 'tiagoecamila')
         while not sta_if.isconnected():
             machine.idle() 
     print('network config:', sta_if.ifconfig())
@@ -30,7 +30,7 @@ def do_connect():
 do_connect()
 
 def main(server=SERVER):
-    client = MQTTClient(CLIENT_ID, server)
+    client = MQTTClient(CLIENT_ID, server, port=1883)
     client.set_callback(sub_cb)
     client.connect()
     client.subscribe('messages_esp')
@@ -47,6 +47,3 @@ def main(server=SERVER):
     client.disconnect()
 
 main()
-
-
- 
