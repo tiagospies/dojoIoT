@@ -12,6 +12,10 @@ doorSensor = Pin(0, Pin.IN)
 IFTTT_SERVER = "http://maker.ifttt.com/trigger/opendoor/with/key/"
 IFTTT_KEY = "cAa_G_-pTA-FDANT-d6QF2"
 IFTTT_URL_CALL = IFTTT_SERVER + IFTTT_KEY
+HEADER_REQUEST = {
+        'content-type': "application/json",
+        'cache-control': "no-cache"
+        }
 
 def sub_cb(topic, msg):
     print((topic, msg))
@@ -31,25 +35,17 @@ do_connect()
 
 def send_status_open():
     payload = "{\n\t\"value1\":\"Aberta\"\n}"
-    headers1 = {
-        'content-type': "application/json",
-        'cache-control': "no-cache"
-        }
-    response = urequests.post(IFTTT_URL_CALL, headers = headers1, data=payload)
+    response = urequests.post(IFTTT_URL_CALL, headers = HEADER_REQUEST, data = payload)
+    response.close()
 
 def send_status_close():
     payload = "{\n\t\"value1\":\"Fechada\"\n}"
-    headers1 = {
-        'content-type': "application/json",
-        'cache-control': "no-cache"
-        }
-    response = urequests.post(IFTTT_URL_CALL, headers = headers1, data=payload)
+    response = urequests.post(IFTTT_URL_CALL, headers = HEADER_REQUEST, data = payload)
+    response.close()
 
 send_status_open()
+time.sleep(2)
 send_status_close()
 
 #doorSensor.irq(trigger=Pin.IRQ_FALLING, handler=send_status_close)
 #doorSensor.irq(trigger=Pin.IRQ_RISING, handler=send_status_open)
-
-
-
