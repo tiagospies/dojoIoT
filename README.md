@@ -36,6 +36,44 @@ Nos exemplos usamos o módulo BeagleBone Black, e um driver para trabalhar com u
 
 ## ESP8266
 Exemplos utilizando o módulo *ESP8266* com *Micropython*.
+Para ter acesso ao sistema de arquivos da ESP8266 pode ser utilizado um pacote chamado **ampy**. Segue abaixo os passos e os comandos para a instalação.
+<br/>
+### Instalando o Ampy
+``` python
+pip install adafruit-ampy
+```
+OU
+
+``` python
+pip install adafruit-ampy
+```
+
+#### Comandos básicos
+
+##### Listando diretórios
+``` python
+ampy -p COM<Porta> ls
+```
+
+##### Rodando aplicação
+``` python
+ampy -p COM<Porta> run <arquivo.py>
+```
+
+##### Copiando a aplicação para o módulo
+``` python
+ampy -p COM<Porta> put <arquivo.py>
+```
+
+##### Copiando um arquivo do módulo para o computador
+``` python
+ampy -p COM<Porta> get <arquivo.py>
+```
+
+##### Removendo um arquivo do módulo
+``` python
+ampy -p COM<Porta> rm <arquivo.py>
+```
 
 ### Estrutura
 `./` <br />
