@@ -25,7 +25,7 @@ Protocolo baseado em NodeJS, onde cada device é um servidor RESTFUL HTTP, para 
 <br/>
 Para comunicação com os sensores e periféricos de Hardware o ZettaJS conta com os drivers de comunicação, caso o driver que você precise não exista, você pode criar o seu. 
 <br/>
-Nos exemplos usamos a placa BeagleBone Black, e um driver para trabalhar com um LED, e também um driver de *Mock* para simular um LED.
+Nos exemplos usamos o módulo BeagleBone Black, e um driver para trabalhar com um LED, e também um driver de *Mock* para simular um LED.
 
 ### Estrutura
 `./` <br />
@@ -35,5 +35,30 @@ Nos exemplos usamos a placa BeagleBone Black, e um driver para trabalhar com um 
 
 
 ## ESP8266
-* MQTT - Exemplo utilizando um servidor com *NodeJS* utilizando o "Mosca" e um client rodando 
-na *ESP8266* enviando os dados de luminosidade para o servidor.
+Exemplos utilizando o módulo *ESP8266* com *Micropython*.
+
+### Estrutura
+`./` <br />
+  `└─ Board - ESP8266/esp8266-ota-20170613-v1.9.1-4.bin` &nbsp;-> *Firmware do Micropython para a gravação na ESP8266. As instruções para a instalação do firmware podem ser encontradas [Neste Link](https://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/intro.html).* <br />
+  `└─ networktest.py` &nbsp;-> *Exemplo de programa para se conectar na wifi e obter um IP na rede.* <br />
+  `└─ ldr.py` &nbsp;-> *Exemplo de Leitura do conversor A/D usando o LDR onboard da ESP8266.*
+
+## Beaglebone Black
+Exemplos de código utilizando a beaglebone com NodeJS e o pacote para programação em **Bonescript**.
+
+### Estrutura
+`./` <br />
+  `└─ Ex1` &nbsp;-> *description* <br />
+  `└─ Ex2` &nbsp;-> *description* <br />
+  `└─ Ex3` &nbsp;-> *description*
+
+
+## Raspbarry PI3 Model B
+Exemplos de código utilizando a Raspbarry PI3 utilizando sistema operacional **Android Things**.
+
+### Estrutura
+`./` <br />
+  `└─ Ex1` &nbsp;-> *description* <br />
+  `└─ Ex2` &nbsp;-> *description* <br />
+  `└─ Ex3` &nbsp;-> *description*
+
