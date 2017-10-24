@@ -11,7 +11,7 @@ Mensageiro para devices com alto desempenho de telemetria. No sistema há um ser
   `└─ Server` &nbsp;-> *Servidor MQTT construido com o Mosca MQTT para NodeJS servido como Broker MQTT.*
 
 Esquema do exemplo utilizando a ESP8266:
-[![](https://halckemy.s3.amazonaws.com/uploads/attachments/353971/cayenne_ldr_zOtjgsiGbu.png)](https://halckemy.s3.amazonaws.com/uploads/attachments/353971/cayenne_ldr_zOtjgsiGbu.png)
+[![1](https://halckemy.s3.amazonaws.com/uploads/attachments/353971/cayenne_ldr_zOtjgsiGbu.png)](https://halckemy.s3.amazonaws.com/uploads/attachments/353971/cayenne_ldr_zOtjgsiGbu.png)
 
 ## IFTTT
 Ferramenta para gerenciamento de ações entre serviços e dispositivos utilizando a simple operação *"IF"*.
@@ -23,7 +23,7 @@ Ferramenta para gerenciamento de ações entre serviços e dispositivos utilizan
 
 Esquema do módulo com o sensor de magnetismo RedSwitch:
 Esquema do exemplo utilizando a ESP8266:
-[![](https://horaciobouzas.files.wordpress.com/2015/07/screen-shot-2015-07-31-at-4-03-43-pm.png)](https://horaciobouzas.files.wordpress.com/2015/07/screen-shot-2015-07-31-at-4-03-43-pm.png)
+[![2](https://horaciobouzas.files.wordpress.com/2015/07/screen-shot-2015-07-31-at-4-03-43-pm.png)](https://horaciobouzas.files.wordpress.com/2015/07/screen-shot-2015-07-31-at-4-03-43-pm.png)
 
 ## ZettaJS
 Protocolo baseado em NodeJS, onde cada device é um servidor RESTFUL HTTP, para proporcionar a programação dita como *Reativa*. 
