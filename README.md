@@ -37,7 +37,7 @@ Nos exemplos usamos o módulo BeagleBone Black, e um driver para trabalhar com u
 `./` <br />
   `└─ Hub` &nbsp;-> *Exemplo de **HUB** onde todas as requisições são **"centralizadas"**.* <br />
   `└─ Device01` &nbsp;-> *Exemplo de **"Device"**, que provê a funcionalidade de "toggle" no led virtual.* <br />
-  `└─ Device01` &nbsp;-> *Exemplo de **"Device"**, que provê a funcionalidade de "toggle" no led da Beaglebone Black.*
+  `└─ Device02` &nbsp;-> *Exemplo de **"Device"**, que provê a funcionalidade de "toggle" no led da Beaglebone Black.*
 
 
 ## ESP8266
@@ -51,7 +51,7 @@ pip install adafruit-ampy
 OU
 
 ``` python
-pip install adafruit-ampy
+pip3 install adafruit-ampy
 ```
 
 #### Comandos básicos
