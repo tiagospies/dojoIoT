@@ -11,7 +11,7 @@ Mensageiro para devices com alto desempenho de telemetria. No sistema há um ser
   `└─ Server` &nbsp;-> *Servidor MQTT construido com o Mosca MQTT para NodeJS servido como Broker MQTT.*
 
 Esquema do exemplo utilizando a ESP8266:
-[![1](https://halckemy.s3.amazonaws.com/uploads/attachments/353971/cayenne_ldr_zOtjgsiGbu.png)](https://halckemy.s3.amazonaws.com/uploads/attachments/353971/cayenne_ldr_zOtjgsiGbu.png)
+[![1](https://cdn.instructables.com/F3P/CZSJ/IZYGIEL7/F3PCZSJIZYGIEL7.MEDIUM.jpg)](https://cdn.instructables.com/F3P/CZSJ/IZYGIEL7/F3PCZSJIZYGIEL7.MEDIUM.jpg)
 
 ## IFTTT
 Ferramenta para gerenciamento de ações entre serviços e dispositivos utilizando a simple operação *"IF"*.
@@ -22,7 +22,6 @@ Ferramenta para gerenciamento de ações entre serviços e dispositivos utilizan
   `└─ Client-ESP8266/luminosity` &nbsp;-> *Cliente IFTTT em Micropython onde ao anoitecer ou amanhecer, é enviada uma HTTPRequest para a URL do IFTTT, indicando que que este evento ocorreu, e qual o valor A/D de luminosidade registrado no momento.* <br />
 
 Esquema do módulo com o sensor de magnetismo RedSwitch:
-Esquema do exemplo utilizando a ESP8266:
 [![2](https://horaciobouzas.files.wordpress.com/2015/07/screen-shot-2015-07-31-at-4-03-43-pm.png)](https://horaciobouzas.files.wordpress.com/2015/07/screen-shot-2015-07-31-at-4-03-43-pm.png)
 
 ## ZettaJS
