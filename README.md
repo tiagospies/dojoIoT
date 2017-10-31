@@ -42,6 +42,17 @@ Nos exemplos usamos o módulo BeagleBone Black, e um driver para trabalhar com u
 
 ## ESP8266
 Exemplos utilizando o módulo *ESP8266* com *Micropython*.
+
+### Instalando o micropython
+#### Pacote para a instalação
+``` python
+pip install esptool
+```
+#### Comando para gravar a flash da ESP
+``` python
+esptool.py --port COM4 --baud 460800 write_flash --flash_size=detect
+``` 
+
 Para ter acesso ao sistema de arquivos da ESP8266 pode ser utilizado um pacote chamado **ampy**. Segue abaixo os passos e os comandos para a instalação.
 <br/>
 ### Instalando o Ampy
