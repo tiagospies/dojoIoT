@@ -34,9 +34,11 @@ def do_connect():
 do_connect()
 
 def send_status_open(p):
-    print('pin change', p)
+    print('pin change', p.value())
     payload = "{\n\t\"value1\":\"AbertaCWI1\"\n}"
     response = urequests.post(IFTTT_URL_CALL, headers = HEADER_REQUEST, data = payload)
     response.close()
+    time.sleep_ms(2000)
+
 
 doorSensor.irq(trigger=Pin.IRQ_FALLING, handler=send_status_open)

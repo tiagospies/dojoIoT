@@ -32,6 +32,9 @@ Protocolo baseado em NodeJS, onde cada device é um servidor RESTFUL HTTP, para 
 Para comunicação com os sensores e periféricos de Hardware o ZettaJS conta com os drivers de comunicação, caso o driver que você precise não exista, você pode criar o seu. 
 <br/>
 Nos exemplos usamos o módulo BeagleBone Black, e um driver para trabalhar com um LED, e também um driver de *Mock* para simular um LED.
+<br/>
+Para simular as ações do ZettaJS é utilizado um browser oferecido pelo próprio framework: 
+http://browser.zettajs.io/#/overview?url=http:%2F%2F127.0.0.1:3000&filter=BeagleBone%20LED
 
 ### Estrutura
 `./` <br />
