@@ -1,0 +1,16 @@
+{
+    "name": "Mosca",
+    "version": "1.0.0",
+    "description": "Mosca",
+    "private": true,
+    "dependencies": {
+      "mosca": "^2.5.1"
+    },
+    "devDependencies": {},
+    "scripts": {
+      "start": "node ./server",
+      "preinstall": "npm cache clear",
+      "postinstall": "bower install"
+    }
+  }
+  

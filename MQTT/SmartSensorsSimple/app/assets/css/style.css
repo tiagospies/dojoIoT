@@ -1,0 +1,33 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #5bc0de;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.temperature {
+	width: 640px;
+	margin: 0 auto;
+	text-align: center;
+	letter-spacing: -0.05em;
+	font-weight: 300;
+}
+
+.icon  {
+	font-size: 2em;
+	display: block;
+}
+
+.temperature p {
+	font-size: 4em;
+}
+
+.sensor {
+	float: left;
+	width: 300px;
+	border: 1px solid #fff;
+	margin: 10px;
+}
