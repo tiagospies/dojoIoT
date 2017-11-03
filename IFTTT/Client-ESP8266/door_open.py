@@ -17,8 +17,12 @@ HEADER_REQUEST = {
         'cache-control': "no-cache"
         }
 
-def sub_cb(topic, msg):
-    print((topic, msg))
+def disable_irq():
+    doorSensor.Pin(0, Pin.IN)
+
+def enable_irq():
+    doorSensor = Pin(0, Pin.IN, machine.Pin.PULL_UP)
+    doorSensor.irq(trigger=Pin.IRQ_FALLING, handler=send_status_open)
 
 def do_connect():
     sta_if = network.WLAN(network.STA_IF)
@@ -29,16 +33,16 @@ def do_connect():
         while not sta_if.isconnected():
             machine.idle() 
     print('network config:', sta_if.ifconfig())
-
-
+    
 do_connect()
 
 def send_status_open(p):
+    disable_irq()
     print('pin change', p.value())
     payload = "{\n\t\"value1\":\"AbertaCWI1\"\n}"
     response = urequests.post(IFTTT_URL_CALL, headers = HEADER_REQUEST, data = payload)
     response.close()
-    time.sleep_ms(2000)
+    enable_irq()
 
 
 doorSensor.irq(trigger=Pin.IRQ_FALLING, handler=send_status_open)
