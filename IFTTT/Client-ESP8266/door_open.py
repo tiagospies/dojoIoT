@@ -18,10 +18,9 @@ HEADER_REQUEST = {
         }
 
 def disable_irq():
-    doorSensor.Pin(0, Pin.IN)
+        doorSensor.irq(handler=None)
 
 def enable_irq():
-    doorSensor = Pin(0, Pin.IN, machine.Pin.PULL_UP)
     doorSensor.irq(trigger=Pin.IRQ_FALLING, handler=send_status_open)
 
 def do_connect():
@@ -33,16 +32,18 @@ def do_connect():
         while not sta_if.isconnected():
             machine.idle() 
     print('network config:', sta_if.ifconfig())
-    
-do_connect()
 
 def send_status_open(p):
     disable_irq()
-    print('pin change', p.value())
-    payload = "{\n\t\"value1\":\"AbertaCWI1\"\n}"
-    response = urequests.post(IFTTT_URL_CALL, headers = HEADER_REQUEST, data = payload)
-    response.close()
+    if(p.value() == 0):
+        payload = "{\n\t\"value1\":\"Aberta\"\n}"
+        response = urequests.post(IFTTT_URL_CALL, headers = HEADER_REQUEST, data = payload)
+        response.close()
     enable_irq()
+    print('Interrupção acionada.');
 
+def main():
+    do_connect()
+    doorSensor.irq(trigger=Pin.IRQ_FALLING, handler=send_status_open)
 
-doorSensor.irq(trigger=Pin.IRQ_FALLING, handler=send_status_open)
+main()
