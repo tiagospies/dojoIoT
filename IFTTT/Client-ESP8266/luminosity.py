@@ -12,9 +12,6 @@ IFTTT_SERVER = "http://maker.ifttt.com/trigger/Luminosity/with/key/"
 IFTTT_KEY = "cAa_G_-pTA-FDANT-d6QF2"
 IFTTT_URL_CALL = IFTTT_SERVER + IFTTT_KEY
 
-def sub_cb(topic, msg):
-    print((topic, msg))
-
 def do_connect():
     sta_if = network.WLAN(network.STA_IF)
     if not sta_if.isconnected():
@@ -29,17 +26,15 @@ def do_connect():
 do_connect()
 
 def send_ADC_value(value):
-    if(value > 100)
-        response = urequests.post(IFTTT_URL_CALL, data = { "value1": str(value), value2: "Dia" })
-
-    if(value < 30)
-        response = urequests.post(IFTTT_URL_CALL, data = { "value1": str(value), value2: "Noite" })
+    response = urequests.post(IFTTT_URL_CALL, data = { "value1": str(value), "value2": "Dia" })
+    response.close()
 
 def main():
     adc = ADC(0)
-    while True:
+    i = 0
+    for i in range(2):
         adcValue = adc.read()
-        #send_ADC_value(int(adcValue))
+        send_ADC_value(int(adcValue))
         time.sleep(2)
 
 main()
