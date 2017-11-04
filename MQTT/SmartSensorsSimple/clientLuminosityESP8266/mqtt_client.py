@@ -10,7 +10,7 @@ import ujson
 # Many ESP8266 boards have active-low "flash" button on GPIO0.
 button = Pin(0, Pin.IN)
 
-SERVER = "broker.hivemq.com"
+SERVER = "192.168.43.84"
 CLIENT_ID = ubinascii.hexlify(machine.unique_id())
 TOPIC = b"led"
 
@@ -33,15 +33,16 @@ def main(server=SERVER):
     client = MQTTClient(CLIENT_ID, server, port=1883)
     client.set_callback(sub_cb)
     client.connect()
-    client.subscribe('messages_esp')
+    client.subscribe('/luminosity')
     adc = ADC(0)           
     while True:
         client.check_msg()
         adcValue = adc.read()
         messageAdc = {
-            "adcValue": str(adcValue)
+            "sensorId": 2,
+            "luminosity": str(adcValue)
         }
-        client.publish('message_esp', ujson.dumps(messageAdc));
+        client.publish('/luminosity', ujson.dumps(messageAdc));
         time.sleep(2)
 
     client.disconnect()
