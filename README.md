@@ -127,8 +127,8 @@ O [Cloud9](https://c9.io/) é uma IDE extremamente amigável e desenvolvida em N
   `└─ \Board - BeagleBone\AD_simple` &nbsp;-> *Neste exemplo é feita a leitura de um conversor A/D, e logo após é feita a escrita do valor lido em um port A/D configurado como **output*** <br />
 
 
-## Raspbarry PI3 Model B
-Exemplos de código utilizando a Raspbarry PI3 utilizando sistema operacional **Android Things**.
+## Raspberry PI3 Model B
+Exemplos de código utilizando a Raspberry PI3 utilizando sistema operacional **Android Things**.
 Para utilizar a imagem do Androir Things na RaPI3, você pode baixar a imagem do Sistema no [Android Things Console](https://partner.android.com/things/console/), onde você cria o seu próprio build com a placa de desenvolvimento desejada e a última versão do Android Things.
 <br/>
 Depois de criada a imagem você pode gravá-la no SDCard utilizando a ferramenta [Win32DiskImager](https://sourceforge.net/projects/win32diskimager/). 
